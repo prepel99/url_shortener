@@ -6,6 +6,10 @@ class UrlShortenerController < ApplicationController
   end
 
   def redirect
-    redirect_to ShortenerHelper::Shortener.short_urls.key(params[:path]), status: 301
+    long_url = ShortenerHelper::Shortener.short_urls.key(params[:path])
+    response.content_type = 'application/json'
+    response.status = 301
+    response.location = long_url
+    render json: { url: long_url }
   end
 end
