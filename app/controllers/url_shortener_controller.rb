@@ -5,5 +5,7 @@ class UrlShortenerController < ApplicationController
     render json: { url: url, short_url: ShortenerHelper::Shortener.add_url(url) }
   end
 
-  def redirect; end
+  def redirect
+    redirect_to ShortenerHelper::Shortener.short_urls.key(params[:path]), status: 301
+  end
 end
