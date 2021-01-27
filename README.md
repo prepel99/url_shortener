@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi, this is my url simple shortener app
 
-Things you may want to cover:
+There is the way you can run it:
+```
+git clone https://github.com/prepel99/url_shortener.git
+cd url_shortener
+docker build -t url_shortener .
+docker run -d -p 4000:4000 url_shortener
+```
+And that's it! 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The app is running on 4000 port by the way
