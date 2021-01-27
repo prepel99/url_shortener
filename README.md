@@ -1,6 +1,6 @@
 # README
 
-Hi, this is my url simple shortener app
+Hi, this is my simple url shortener app
 
 There is the way you can run it:
 ```
